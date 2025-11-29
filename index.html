@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>С Днем Рождения, родной!</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap');
+
+body {
+margin: 0;
+padding: 0;
+background: black;
+overflow: hidden;
+font-family: 'Montserrat', sans-serif;
+}
+
+/* Туман */
+.smoke {
+position: fixed;
+top: 0; left: 0;
+width: 100%;
+height: 100%;
+background: url("https://i.ibb.co/HGGn7xH/smoke.png");
+opacity: 0.4;
+animation: moveSmoke 15s infinite linear;
+}
+
+@keyframes moveSmoke {
+from { background-position: 0 0; }
+to { background-position: 1000px 0; }
+}
+
+/* Stranger things текст */
+.title {
+position: absolute;
+top: 25%;
+width: 100%;
+text-align: center;
+font-size: 70px;
+color: #ff0000;
+letter-spacing: 6px;
+text-shadow: 0 0 10px red, 0 0 20px #ff0030, 0 0 40px #ff0030;
+animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {opacity: 1;}
+20%, 24%, 55% {opacity: 0.4;}
+}
+
+/* Теплое послание */
+.message {
+position: absolute;
+top: 55%;
+width: 70%;
+left: 15%;
+text-align: center;
+font-size: 24px;
+color: white;
+line-height: 1.5;
+animation: fadeIn 4s ease-in-out;
+}
+
+@keyframes fadeIn {
+from {opacity: 0;}
+to {opacity: 1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="smoke"></div>
+
+<div class="title">С ДНЁМ РОЖДЕНИЯ, РОДНОЙ!</div>
+
+<div class="message">
+Сегодня мир стал ярче, потому что в этот день появился человек,
+который умеет вдохновлять, поддерживать и делать жизнь интереснее.
+Спасибо тебе за дружбу, за искренние моменты и за то, что остаёшься собой.
+<br><br>
+Желаю тебе смелости, громких побед, верных людей рядом и бесконечного света.
+<br><br>
+Ты ценен. Ты важен. Ты невероятный друг — и я горжусь тем, что знаю тебя.
+</div>
+
+<!-- Музыка -->
+<audio id="music" autoplay loop>
+<source src="https://files.catbox.moe/6s2q5k.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.addEventListener('click', () => {
+document.getElementById("music").play();
+});
+</script>
+
+</body>
+</html>
